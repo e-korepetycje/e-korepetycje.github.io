@@ -3,17 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamiczna Strona</title>
-    <link rel="stylesheet" href="style.css">
+    <title>EMLearning</title>
+    <style>
+        /* Podstawowy styl strony */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8; /* Jasny szary kolor tła */
+            color: #333; /* Ciemnoszary kolor tekstu */
+        }
+
+        /* Styl dla górnego menu */
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #002147; /* Granatowy kolor menu */
+            padding: 1rem;
+        }
+
+        .navbar a {
+            color: white; /* Biały kolor tekstu w menu */
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s; /* Płynne przejście dla efektu hover */
+        }
+
+        .navbar a:hover {
+            background-color: #555; /* Szary kolor podczas najechania */
+            border-radius: 5px;
+        }
+
+        /* Styl sekcji */
+        section {
+            padding: 2rem;
+            margin: 1rem 0;
+            background-color: white; /* Białe tło sekcji */
+            border-radius: 8px; /* Zaokrąglone rogi sekcji */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Delikatny cień */
+        }
+
+        h2 {
+            color: #002147; /* Granatowy kolor nagłówków sekcji */
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Główne menu -->
+    <!-- Górne menu nawigacyjne -->
     <nav class="navbar">
-        <ul>
-            <li><a href="#" data-page="strona1">Ugoda z bankiem</a></li>
-            <li><a href="#" data-page="strona2">Czy mogę pozwać?</a></li>
-            <li><a href="#" data-page="strona3">Pozew i proces</a></li>
-            <li><a href="#" data-page="strona4">Wyrok i dalsze czynności</a></li>
-            <li><a href="#" data-page="strona5">Jak wybrać kancelarię?</a></li>
-            <li><a href="#" data-page="strona6">Pliki do pob
+        <a href="#omnie">EMLearning - O mnie</a>
+        <a href="#analiza-matematyczna">Analiza Matematyczna</a>
+        <a href="#algebra">Algebra</a>
+        <a href="#rachunek-prawdopodobienstwa">Rachunek Prawdopodobieństwa</a>
+        <a href="#matematyka-matura">Matematyka - Matura</a>
+        <a href="#statystyka">Statystyka</a>
+        <a href="#analityka-danych">Analityka Danych</a>
+    </nav>
+
+    <!-- Sekcje strony, które będą odnośnikami dla menu -->
+    <section id="omnie">
+        <h2>O mnie</h2>
+        <p>Witamy na stronie EMLearning! Tutaj znajdziesz informacje o mni
