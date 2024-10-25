@@ -91,3 +91,23 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* Styl dla urządzeń mobilnych */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column; /* Zmiana kierunku na kolumnowy */
+        align-items: center; /* Wyśrodkowanie elementów */
+    }
+
+    .navbar li {
+        margin: 0.5rem 0; /* Mniejsze odstępy dla mobilnych */
+    }
+
+    .navbar a {
+        font-size: 1.2rem; /* Powiększenie czcionki */
+    }
+
+    section {
+        padding: 1rem; /* Mniejsze paddingi dla sekcji */
+    }
+}
