@@ -1,1 +1,94 @@
+/* Resetowanie podstawowych stylów */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8; /* Jasny szary kolor tła */
+    color: #333; /* Ciemnoszary kolor tekstu */
+}
+
+/* Styl nagłówka */
+header {
+    background-color: #001f3f; /* Ciemny niebieski kolor nagłówka */
+    padding: 1rem 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center; /* Wyśrodkowanie menu */
+}
+
+.navbar ul {
+    list-style: none; /* Usunięcie punktów listy */
+    display: flex; /* Flexbox dla poziomego układu */
+}
+
+.navbar li {
+    margin: 0 1rem; /* Odstęp między elementami */
+    position: relative; /* Umożliwia pozycjonowanie podmenu */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white; /* Biały kolor tekstu w menu */
+    font-weight: bold;
+    transition: color 0.3s; /* Płynne przejście dla efektu hover */
+}
+
+.navbar a:hover {
+    color: #ccc; /* Jaśniejszy szary kolor podczas najechania */
+}
+
+/* Styl rozwijanego podmenu */
+.dropdown-content {
+    display: none; /* Domyślnie ukryte */
+    position: absolute; /* Pozycjonowanie względem rodzica */
+    background-color: #001f3f; /* Ciemny niebieski kolor tła podmenu */
+    min-width: 160px; /* Minimalna szerokość */
+    z-index: 1; /* Z-index, aby być nad innymi elementami */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Pokazuje podmenu po najechaniu */
+}
+
+.dropdown-content a {
+    color: white; /* Biały kolor tekstu w podmenu */
+    padding: 12px 16px; /* Padding wewnętrzny */
+    text-decoration: none; /* Usunięcie podkreślenia */
+    display: block; /* Blokowy element dla całej szerokości */
+}
+
+.dropdown-content a:hover {
+    background-color: #555; /* Szary kolor podczas najechania na podmenu */
+}
+
+/* Styl sekcji */
+main {
+    padding: 2rem;
+}
+
+section {
+    background-color: white; /* Białe tło sekcji */
+    margin: 1rem 0;
+    padding: 1.5rem;
+    border-radius: 8px; /* Zaokrąglone rogi sekcji */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Delikatny cień */
+}
+
+/* Styl stopki */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #001f3f; /* Ciemny niebieski kolor stopki */
+    color: white; /* Biały kolor tekstu w stopce */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
 
