@@ -16,11 +16,13 @@ body {
 header {
     background-color: #333; /* Ciemny szary kolor nagłówka */
     padding: 1rem 0;
+    position: relative; /* Pozycjonowanie dla hamburgera */
 }
 
 .navbar {
     display: flex;
-    justify-content: center; /* Wyśrodkowanie menu */
+    justify-content: space-between; /* Wyśrodkowanie menu z hamburgerem */
+    align-items: center; /* Wyrównanie elementów */
 }
 
 .navbar ul {
@@ -42,6 +44,14 @@ header {
 
 .navbar a:hover {
     color: #ccc; /* Jaśniejszy szary kolor podczas najechania */
+}
+
+/* Styl przycisku hamburgera */
+.hamburger {
+    font-size: 24px; /* Rozmiar ikonki hamburgera */
+    color: white; /* Biały kolor */
+    cursor: pointer; /* Kursor wskazujący na kliknięcie */
+    display: none; /* Ukryte na większych ekranach */
 }
 
 /* Styl rozwijanego podmenu */
@@ -97,17 +107,24 @@ footer {
     .navbar ul {
         flex-direction: column; /* Zmiana kierunku na kolumnowy */
         align-items: center; /* Wyśrodkowanie elementów */
+        display: none; /* Ukrycie menu domyślnie */
+        width: 100%; /* Szerokość menu */
+        background-color: #333; /* Tło menu */
+        position: absolute; /* Pozycjonowanie w kontekście nagłówka */
+        top: 50px; /* Wysokość nagłówka */
+        left: 0; /* Pozycja od lewej */
+        z-index: 2; /* Z-index, aby menu było nad innymi elementami */
     }
 
     .navbar li {
         margin: 0.5rem 0; /* Mniejsze odstępy dla mobilnych */
     }
 
-    .navbar a {
-        font-size: 1.2rem; /* Powiększenie czcionki */
+    .hamburger {
+        display: block; /* Wyświetlenie hamburgera na mniejszych ekranach */
     }
+}
 
-    section {
-        padding: 1rem; /* Mniejsze paddingi dla sekcji */
-    }
+.hidden {
+    display: none; /* Klasa ukrywająca element */
 }
