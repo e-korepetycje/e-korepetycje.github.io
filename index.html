@@ -4,101 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EMLearning</title>
-    <style>
-        /* Podstawowy styl strony */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f8f8; /* Jasny szary kolor tła */
-            color: #333; /* Ciemnoszary kolor tekstu */
-        }
-
-        /* Styl dla górnego menu */
-        .navbar {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            background-color: #002147; /* Granatowy kolor menu */
-            padding: 1rem;
-        }
-
-        .navbar a {
-            color: white; /* Biały kolor tekstu w menu */
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            font-weight: bold;
-            transition: background-color 0.3s; /* Płynne przejście dla efektu hover */
-        }
-
-        .navbar a:hover {
-            background-color: #555; /* Szary kolor podczas najechania */
-            border-radius: 5px;
-        }
-
-        /* Styl sekcji */
-        section {
-            padding: 2rem;
-            margin: 1rem 0;
-            background-color: white; /* Białe tło sekcji */
-            border-radius: 8px; /* Zaokrąglone rogi sekcji */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Delikatny cień */
-        }
-
-        h2 {
-            color: #002147; /* Granatowy kolor nagłówków sekcji */
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Górne menu nawigacyjne -->
-    <nav class="navbar">
-        <a href="#omnie">EMLearning - O mnie</a>
-        <a href="#analiza-matematyczna">Analiza Matematyczna</a>
-        <a href="#algebra">Algebra</a>
-        <a href="#rachunek-prawdopodobienstwa">Rachunek Prawdopodobieństwa</a>
-        <a href="#matematyka-matura">Matematyka - Matura</a>
-        <a href="#statystyka">Statystyka</a>
-        <a href="#analityka-danych">Analityka Danych</a>
-    </nav>
+    <!-- Nagłówek -->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#omnie">O mnie</a></li>
+                <li class="dropdown">
+                    <a href="#matematyka">Matematyka Wyższa</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#analiza">Analiza Matematyczna</a></li>
+                        <li><a href="#algebra">Algebra</a></li>
+                    </ul>
+                </li>
+                <li><a href="#statystyka">Statystyka</a></li>
+                <li><a href="#rachunek">Rachunek Prawdopodobieństwa</a></li>
+                <li><a href="#analiza">Analiza Danych</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Sekcje strony, które będą odnośnikami dla menu -->
-    <section id="omnie">
-        <h2>O mnie</h2>
-        <p>Witamy na stronie EMLearning! Tutaj znajdziesz informacje o mnie oraz oferowanych kursach matematycznych.</p>
-    </section>
+    <!-- Sekcje -->
+    <main>
+        <section id="omnie">
+            <h2>O mnie</h2>
+            <p>Tu wpisz informacje o sobie, swoje doświadczenie i kwalifikacje.</p>
+        </section>
 
-    <section id="analiza-matematyczna">
-        <h2>Analiza Matematyczna</h2>
-        <p>Opis kursów i zasobów z Analizy Matematycznej.</p>
-    </section>
+        <section id="matematyka">
+            <h2>Matematyka Wyższa</h2>
+            <p>Tu opisz oferowane kursy z matematyki wyższej.</p>
+        </section>
 
-    <section id="algebra">
-        <h2>Algebra</h2>
-        <p>Materiały i informacje o kursach z Algebry.</p>
-    </section>
+        <section id="analiza">
+            <h2>Analiza Matematyczna</h2>
+            <p>Tu opisz kursy z analizy matematycznej.</p>
+        </section>
 
-    <section id="rachunek-prawdopodobienstwa">
-        <h2>Rachunek Prawdopodobieństwa</h2>
-        <p>Opis kursów z rachunku prawdopodobieństwa.</p>
-    </section>
+        <section id="algebra">
+            <h2>Algebra</h2>
+            <p>Tu opisz kursy z algebry.</p>
+        </section>
 
-    <section id="matematyka-matura">
-        <h2>Matematyka - Matura</h2>
-        <p>Przygotowanie do matury z matematyki.</p>
-    </section>
-    
-    <section id="statystyka">
-        <h2>Statystyka</h2>
-        <p>Kursy i zasoby dotyczące statystyki.</p>
-        <a href="test_statystyka.html" class="button">Przejdź do testu statystyka dla WNE, SGGW</a>
-    </section>
+        <section id="statystyka">
+            <h2>Statystyka</h2>
+            <p>Tu opisz oferowane kursy ze statystyki.</p>
+        </section>
 
-    <section id="analityka-danych">
-        <h2>Analityka Danych</h2>
-        <p>Kursy związane z analityką danych i nauką o danych.</p>
-    </section>
+        <section id="rachunek">
+            <h2>Rachunek Prawdopodobieństwa</h2>
+            <p>Tu opisz oferowane kursy z rachunku prawdopodobieństwa.</p>
+        </section>
+
+        <section id="analiza">
+            <h2>Analiza Danych</h2>
+            <p>Tu opisz oferowane kursy z analizy danych.</p>
+        </section>
+    </main>
+
+    <!-- Stopka -->
+    <footer>
+        <p>&copy; 2024 EMLearning. Wszystkie prawa zastrzeżone.</p>
+    </footer>
 
 </body>
 </html>
