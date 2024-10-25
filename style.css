@@ -1,130 +1,127 @@
-/* Resetowanie podstawowych stylów */
+/* Ogólne style */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f8f8f8; /* Jasny szary kolor tła */
-    color: #333; /* Ciemnoszary kolor tekstu */
+    background-color: #f4f4f4;
 }
 
-/* Styl nagłówka */
 header {
-    background-color: #333; /* Ciemny szary kolor nagłówka */
-    padding: 1rem 0;
-    position: relative; /* Pozycjonowanie dla hamburgera */
+    background-color: #333333;
+    padding: 10px;
+    color: #ffffff;
 }
 
 .navbar {
     display: flex;
-    justify-content: space-between; /* Wyśrodkowanie menu z hamburgerem */
-    align-items: center; /* Wyrównanie elementów */
+    justify-content: space-between;
+    align-items: center;
 }
 
-.navbar ul {
-    list-style: none; /* Usunięcie punktów listy */
-    display: flex; /* Flexbox dla poziomego układu */
-}
-
-.navbar li {
-    margin: 0 1rem; /* Odstęp między elementami */
-    position: relative; /* Umożliwia pozycjonowanie podmenu */
-}
-
-.navbar a {
+.logo {
+    font-size: 1.5rem;
     text-decoration: none;
-    color: white; /* Biały kolor tekstu w menu */
-    font-weight: bold;
-    transition: color 0.3s; /* Płynne przejście dla efektu hover */
+    color: #ffffff;
 }
 
-.navbar a:hover {
-    color: #ccc; /* Jaśniejszy szary kolor podczas najechania */
-}
-
-/* Styl przycisku hamburgera */
 .hamburger {
-    font-size: 24px; /* Rozmiar ikonki hamburgera */
-    color: white; /* Biały kolor */
-    cursor: pointer; /* Kursor wskazujący na kliknięcie */
-    display: none; /* Ukryte na większych ekranach */
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #ffffff;
+    display: none;
 }
 
-/* Styl rozwijanego podmenu */
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+/* Podmenu dla Matematyka Wyższa */
 .dropdown-content {
-    display: none; /* Domyślnie ukryte */
-    position: absolute; /* Pozycjonowanie względem rodzica */
-    background-color: #333; /* Ciemny szary kolor tła podmenu */
-    min-width: 160px; /* Minimalna szerokość */
-    z-index: 1; /* Z-index, aby być nad innymi elementami */
-}
-
-.dropdown:hover .dropdown-content {
-    display: block; /* Pokazuje podmenu po najechaniu */
+    display: none;
+    position: absolute;
+    background-color: #444;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 5px;
 }
 
 .dropdown-content a {
-    color: white; /* Biały kolor tekstu w podmenu */
-    padding: 12px 16px; /* Padding wewnętrzny */
-    text-decoration: none; /* Usunięcie podkreślenia */
-    display: block; /* Blokowy element dla całej szerokości */
+    color: #ffffff;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
 }
 
 .dropdown-content a:hover {
-    background-color: #555; /* Jaśniejszy szary kolor podczas najechania na podmenu */
+    background-color: #555;
 }
 
-/* Styl sekcji */
-main {
-    padding: 2rem;
+/* Pokaż podmenu na hover */
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
-section {
-    background-color: white; /* Białe tło sekcji */
-    margin: 1rem 0;
-    padding: 1.5rem;
-    border-radius: 8px; /* Zaokrąglone rogi sekcji */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Delikatny cień */
+/* Strzałka */
+.arrow {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
 }
 
-/* Styl stopki */
-footer {
-    text-align: center;
-    padding: 1rem 0;
-    background-color: #333; /* Ciemny szary kolor stopki */
-    color: white; /* Biały kolor tekstu w stopce */
-    position: relative;
-    bottom: 0;
-    width: 100%;
+/* Obrót strzałki po otwarciu podmenu */
+.dropdown:hover .arrow {
+    transform: rotate(180deg);
 }
 
-/* Styl dla urządzeń mobilnych */
+/* Styl dla mobilnego menu */
+#menu {
+    display: flex;
+}
+
 @media (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column; /* Zmiana kierunku na kolumnowy */
-        align-items: center; /* Wyśrodkowanie elementów */
-        display: none; /* Ukrycie menu domyślnie */
-        width: 100%; /* Szerokość menu */
-        background-color: #333; /* Tło menu */
-        position: absolute; /* Pozycjonowanie w kontekście nagłówka */
-        top: 50px; /* Wysokość nagłówka */
-        left: 0; /* Pozycja od lewej */
-        z-index: 2; /* Z-index, aby menu było nad innymi elementami */
-    }
-
-    .navbar li {
-        margin: 0.5rem 0; /* Mniejsze odstępy dla mobilnych */
-    }
-
     .hamburger {
-        display: block; /* Wyświetlenie hamburgera na mniejszych ekranach */
+        display: block;
     }
-}
 
-.hidden {
-    display: none; /* Klasa ukrywająca element */
+    #menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: #333333;
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    #menu ul {
+        flex-direction: column;
+    }
+
+    #menu ul li {
+        margin: 10px 0;
+    }
+
+    /* Podmenu wyświetlane na kliknięcie w wersji mobilnej */
+    .dropdown-content {
+        position: relative;
+    }
 }

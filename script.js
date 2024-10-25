@@ -1,9 +1,12 @@
-// script.js
-document.addEventListener('DOMContentLoaded', function () {
-    const hamburger = document.getElementById('hamburger');
+function toggleMenu() {
     const menu = document.getElementById('menu');
-
-    hamburger.addEventListener('click', function () {
-        menu.classList.toggle('hidden'); // Przełączanie klasy ukrywającej
-    });
-});
+    const hamburger = document.getElementById('hamburger');
+    
+    if (menu.style.display === 'flex') {
+        menu.style.display = 'none';
+        hamburger.innerHTML = '&#9776;';  // Powrót do ikony hamburgera
+    } else {
+        menu.style.display = 'flex';
+        hamburger.innerHTML = '&#10005;';  // Ikona "X" zamiast hamburgera
+    }
+}
