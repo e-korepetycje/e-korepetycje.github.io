@@ -120,6 +120,15 @@ nav ul li a {
         margin: 10px 0;
     }
 
+    /* Zmiana kolejności elementów w menu mobilnym */
+    .dropdown {
+        order: 1; /* Ustawienie „Matematyka stosowana” wyżej */
+    }
+
+    #menu li:nth-child(3) {
+        order: 2; /* Ustawienie „Statystyka” poniżej „Matematyka stosowana” */
+    }
+
     /* Podmenu wyświetlane na kliknięcie w wersji mobilnej */
     .dropdown-content {
         position: relative;
