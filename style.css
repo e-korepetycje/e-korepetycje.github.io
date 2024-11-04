@@ -101,15 +101,30 @@ nav ul li a {
     }
 
     #menu {
-        display: none;
+        display: none; /* Ukryte menu, gdy nie ma klasy 'show' */
         flex-direction: column;
         position: absolute;
         top: 60px;
-        right: 10px;
+        right: 0;
         background-color: #333333;
-        width: 300px;
+        width: 345px;
         padding: 10px;
-        border-radius: 5px;
+        border-radius: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    #menu.show {
+        display: flex; /* Pokazanie menu po dodaniu klasy 'show' */
+        opacity: 1;
+        visibility: visible;
+        flex-direction: column; /* Wyświetlanie elementów w kolumnie */
+    }
+
+    /* Zmiana kolejności elementów w menu mobilnym */
+    #menu {
+        display: flex;
+        flex-direction: column-reverse; /* Odwrócenie kolejności elementów */
     }
 
     #menu ul {
@@ -120,17 +135,9 @@ nav ul li a {
         margin: 10px 0;
     }
 
-    /* Zmiana kolejności elementów w menu mobilnym */
-    .dropdown {
-        order: 1; /* Ustawienie „Matematyka stosowana” wyżej */
-    }
-
-    #menu li:nth-child(3) {
-        order: 2; /* Ustawienie „Statystyka” poniżej „Matematyka stosowana” */
-    }
-
     /* Podmenu wyświetlane na kliknięcie w wersji mobilnej */
     .dropdown-content {
         position: relative;
     }
+}
 }
