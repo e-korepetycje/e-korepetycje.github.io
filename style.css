@@ -49,6 +49,8 @@ nav ul li a {
     text-decoration: none;
     color: #ffffff;
     font-size: 1rem;
+    display: flex; /* Używamy flexa, aby tekst i strzałka były w linii */
+    align-items: center;
 }
 
 /* Podmenu dla Matematyka Wyższa */
@@ -85,6 +87,7 @@ nav ul li a {
     margin-left: 5px;
     font-size: 0.8rem;
     transition: transform 0.3s ease;
+    /* Dzięki flexowi strzałka pozostaje na końcu */
 }
 
 /* Obrót strzałki po otwarciu podmenu */
