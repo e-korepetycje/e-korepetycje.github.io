@@ -1,0 +1,146 @@
+/* Ogólne style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333333;
+    padding: 10px;
+    color: #ffffff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.hamburger {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #ffffff;
+    display: none;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+/* Podmenu dla Matematyka Wyższa */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: #ffffff;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+/* Pokaż podmenu na hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Strzałka tylko dla elementów z podmenu */
+.dropdown > a::after {
+    content: "▼";
+    margin-left: 5px;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+/* Obrót strzałki po otwarciu podmenu */
+.dropdown:hover > a::after {
+    transform: rotate(180deg);
+}
+
+/* Styl dla mobilnego menu */
+#menu {
+    display: flex;
+    transition: width 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#menu.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Style responsywne */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    #menu {
+        display: none; /* Ukryte menu, gdy nie ma klasy 'show' */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333333;
+        width: 100%; /* Pełna szerokość na ekranach mobilnych */
+        padding: 10px;
+        border-radius: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    #menu.show {
+        display: flex; /* Pokazanie menu po dodaniu klasy 'show' */
+        opacity: 1;
+        visibility: visible;
+    }
+
+    #menu ul {
+        flex-direction: column;
+    }
+
+    #menu ul li {
+        margin: 10px 0;
+    }
+
+    /* Podmenu wyświetlane na kliknięcie w wersji mobilnej */
+    .dropdown-content {
+        position: relative;
+    }
+}
