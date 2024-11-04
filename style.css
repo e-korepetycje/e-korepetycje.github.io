@@ -49,6 +49,8 @@ nav ul li a {
     text-decoration: none;
     color: #ffffff;
     font-size: 1rem;
+    display: flex; /* Używamy flexa, aby tekst i strzałka były w linii */
+    align-items: center;
 }
 
 /* Podmenu dla Matematyka Wyższa */
@@ -79,22 +81,29 @@ nav ul li a {
     display: block;
 }
 
-/* Strzałka */
-.arrow {
+/* Strzałka tylko dla elementów z podmenu */
+.dropdown > a::after {
+    content: "▼";
     margin-left: 5px;
+    font-size: 0.8rem;
     transition: transform 0.3s ease;
+    /* Dzięki flexowi strzałka pozostaje na końcu */
 }
 
 /* Obrót strzałki po otwarciu podmenu */
-.dropdown:hover .arrow {
+.dropdown:hover > a::after {
     transform: rotate(180deg);
 }
 
 /* Styl dla mobilnego menu */
 #menu {
     display: flex;
+    transition: width 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
 }
 
+/* Style responsywne */
 @media (max-width: 768px) {
     .hamburger {
         display: block;
@@ -107,7 +116,7 @@ nav ul li a {
         top: 60px;
         right: 0;
         background-color: #333333;
-        width: 300px;
+        width: 345px; /* Ustawienie stałej szerokości menu na 345px */
         padding: 10px;
         border-radius: 0;
         opacity: 0;
@@ -118,13 +127,6 @@ nav ul li a {
         display: flex; /* Pokazanie menu po dodaniu klasy 'show' */
         opacity: 1;
         visibility: visible;
-        flex-direction: column; /* Wyświetlanie elementów w kolumnie */
-    }
-
-    /* Zmiana kolejności elementów w menu mobilnym */
-    #menu {
-        display: flex;
-        flex-direction: column-reverse; /* Odwrócenie kolejności elementów */
     }
 
     #menu ul {
@@ -139,5 +141,4 @@ nav ul li a {
     .dropdown-content {
         position: relative;
     }
-}
 }
