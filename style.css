@@ -49,8 +49,6 @@ nav ul li a {
     text-decoration: none;
     color: #ffffff;
     font-size: 1rem;
-    display: flex; /* Używamy flexa, aby tekst i strzałka były w linii */
-    align-items: center;
 }
 
 /* Podmenu dla Matematyka Wyższa */
@@ -81,52 +79,37 @@ nav ul li a {
     display: block;
 }
 
-/* Strzałka tylko dla elementów z podmenu */
-.dropdown > a::after {
-    content: "▼";
+/* Strzałka */
+.arrow {
     margin-left: 5px;
-    font-size: 0.8rem;
     transition: transform 0.3s ease;
-    /* Dzięki flexowi strzałka pozostaje na końcu */
 }
 
 /* Obrót strzałki po otwarciu podmenu */
-.dropdown:hover > a::after {
+.dropdown:hover .arrow {
     transform: rotate(180deg);
 }
 
 /* Styl dla mobilnego menu */
 #menu {
     display: flex;
-    transition: width 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
-    opacity: 0;
-    visibility: hidden;
 }
 
-/* Style responsywne */
 @media (max-width: 768px) {
     .hamburger {
         display: block;
     }
 
     #menu {
-        display: none; /* Ukryte menu, gdy nie ma klasy 'show' */
+        display: none;
         flex-direction: column;
         position: absolute;
         top: 60px;
-        right: 0;
+        right: 10px;
         background-color: #333333;
-        width: 345px; /* Ustawienie stałej szerokości menu na 345px */
+        width: 200px;
         padding: 10px;
-        border-radius: 0;
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    #menu.show {
-        display: flex; /* Pokazanie menu po dodaniu klasy 'show' */
-        opacity: 1;
-        visibility: visible;
+        border-radius: 5px;
     }
 
     #menu ul {
